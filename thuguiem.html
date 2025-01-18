@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Gửi Em</title>
+    
+    <!-- Mã theo dõi Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
+    <!-- Kết thúc mã theo dõi -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        input[type="password"] {
+            margin-top: 10px;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            display: none;
+            text-align: left;
+            line-height: 1.5;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I Miss You!</h1>
+        <p>Đây là bức thư anh muốn gửi đến em. Vui lòng nhập mật khẩu để mở:</p>
+        <input type="password" id="password" placeholder="Nhập mật khẩu">
+        <button onclick="checkPassword()">Mở Thư</button>
+        <div class="message" id="message">
+            <h2>Em yêu [Her Name],</h2>
+            <p>hehehehehe, lời nói đầu tiên anh chỉ muốn nói rằng anh nhớ em lắmmmmm. Chẳng hiểu sao dạo này anh mơ thấy em nhiều kinh khủng, anh chả biết nói gì nữa, anh muốn xin lỗi em nhiều lắm, xin lỗi cực kỳ nhiều vì cái tính cách trẻ con của anh. Anh biết có thể là những lời này sẽ không bao giờ đến được với em, nhưng đâu đó anh vẫn hy vọng người anh từng yêu nhất sẽ đọc được những dòng này. Anh hy vọng mọi điều tốt đẹp nhất trên thế giới này sẽ đến với em thay cho phần anh, thật tồi tệ khi những lời nói của anh chỉ có thể nói mà không hành động được, xin lỗi em vì tính cách độc hại của anh. Anh làm ra cái trò vô tri không hy vọng điều gì hết. Chỉ là anh muốn giải tỏa hết mọi điều muốn nói trong lòng của mình với em thông qua mấy cái web vô nghĩa này. Anh vẫn còn yêu em nhiều lắm. Vậy nên, hi vọng nếu một ngày nào đó em cô đơn hoặc không có ai để tâm sự, xin em hãy tìm tới anh, anh vẫn luôn ở đây đợi em, và dĩ nhiên nếu em thấy xàm xí thì có thể bỏ qua và coi như chưa có gì xảy ra. Hy vọng mọi thứ sẽ đến với em sẽ dễ dàng và thế giới này dịu dàng với em hơn.</p>
+            <p>Yêu em,<br>[Your Name]</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById("password").value;
+            const correctPassword = "18082008"; // Thay bằng ngày sinh nhật của cô ấy (định dạng ddmmyyyy)
+            const message = document.getElementById("message");
+
+            if (inputPassword === correctPassword) {
+                message.style.display = "block";
+            } else {
+                alert("Mật khẩu không chính xác. Vui lòng thử lại.");
+            }
+        }
+    </script>
+</body>
+</html>
